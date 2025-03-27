@@ -1,6 +1,6 @@
 {
     "name": "com.simgenics.3dpact-es-clientfiles",
-    "version": "2025.2.1f0",
+    "version": "25.2.0",
     "displayName": "3D PACT ES CLIENT FILES",
     "description": "Funtionaility for logging in, importing and exporting bundles",
     "unity": "2022.3",
