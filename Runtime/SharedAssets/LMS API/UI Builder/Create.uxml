@@ -1,0 +1,39 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="AssetTypeTemplate" src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/AssetTypeTemplate.uxml?fileID=9197481963319205126&amp;guid=77d73f59e34e14f5f865145df763a732&amp;type=3#AssetTypeTemplate" />
+    <Style src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/Styles/add-lms.uss?fileID=7433441132597879392&amp;guid=eecb95c6b23dd06489c69c6d1ed36c47&amp;type=3#add-lms" />
+    <Style src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/Styles/company.uss?fileID=7433441132597879392&amp;guid=79637843c21624e2fb13b23aaa86336a&amp;type=3#company" />
+    <ui:GroupBox style="background-color: rgb(113, 113, 113); margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; width: 500px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: 80%;">
+        <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1">
+            <ui:GroupBox name="GroupAsset" class="section" style="margin-top: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                <ui:Instance template="AssetTypeTemplate" name="AssetTypeTemplate" />
+            </ui:GroupBox>
+            <ui:GroupBox name="GroupInfo" class="section" style="padding-bottom: 0;">
+                <ui:Label text="Info" display-tooltip-when-elided="true" class="item-label" />
+                <ui:TextField picking-mode="Ignore" label="ID:" value="filler text" text="0" name="TxtId" readonly="true" style="-unity-font-style: normal;" />
+                <ui:TextField picking-mode="Ignore" label="Creation Time:" value="filler text" text="0" name="TxtCreated" readonly="true" style="-unity-font-style: normal;" />
+                <ui:TextField picking-mode="Ignore" label="Name:" value="filler text" text="filler text" name="TxtName" style="-unity-font-style: normal;" />
+                <ui:GroupBox name="GroupDescription" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-bottom: 0;">
+                    <ui:Label text="Description:" display-tooltip-when-elided="true" />
+                    <ui:TextField picking-mode="Ignore" value="weq" name="TxtDescription" style="-unity-font-style: normal; height: auto; margin-left: 3px; margin-right: 3px; margin-top: 3px; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 0;" />
+                </ui:GroupBox>
+            </ui:GroupBox>
+            <ui:GroupBox name="GroupFile" class="section">
+                <ui:Label text="File" display-tooltip-when-elided="true" class="item-label" />
+                <ui:DropdownField label="Asset Bundle" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="DropdownAsset" />
+                <ui:DropdownField label="File to upload" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="DropdownOrigin" />
+                <ui:Button text="Upload" display-tooltip-when-elided="true" name="BtnUpload" />
+                <ui:ProgressBar title="my-progress" name="UploadProgress" />
+            </ui:GroupBox>
+            <ui:GroupBox name="GroupState" class="section">
+                <ui:Label text="State" display-tooltip-when-elided="true" class="item-label" />
+                <ui:Toggle label="Locked" name="TglLock" value="true" style="flex-direction: row; flex-wrap: nowrap;" />
+                <ui:Toggle label="Active" name="TglActive" value="true" />
+            </ui:GroupBox>
+            <ui:Button text="Save" display-tooltip-when-elided="true" name="BtnSave" style="-unity-font-style: bold;" />
+            <ui:GroupBox name="Header" style="flex-direction: row; justify-content: space-between; flex-wrap: nowrap;">
+                <ui:Label text="Upload File" display-tooltip-when-elided="true" class="item-label" />
+                <ui:Button text="X" display-tooltip-when-elided="true" name="BtnClose" />
+            </ui:GroupBox>
+        </ui:ScrollView>
+    </ui:GroupBox>
+</ui:UXML>

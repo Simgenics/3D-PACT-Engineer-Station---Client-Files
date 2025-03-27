@@ -1,0 +1,78 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="AssetTypeTemplate" src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/AssetTypeTemplate.uxml?fileID=9197481963319205126&amp;guid=77d73f59e34e14f5f865145df763a732&amp;type=3#AssetTypeTemplate" />
+    <Style src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/Styles/company.uss?fileID=7433441132597879392&amp;guid=79637843c21624e2fb13b23aaa86336a&amp;type=3#company" />
+    <Style src="project://database/Assets/_SharedAssets/LMS%20API/UI%20Builder/Styles/entity-radio.uss?fileID=7433441132597879392&amp;guid=216fb57967f3c42949b1f902429dd3f7&amp;type=3#entity-radio" />
+    <ui:GroupBox focusable="true" style="flex-direction: row; flex-grow: 1; width: 80%; height: 60%; justify-content: flex-start; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 10%; margin-right: 10%; margin-top: 10%; margin-bottom: 10%;">
+        <ui:VisualElement name="ColCompanies" focusable="true" class="column" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+            <ui:Button text="Companies ↻" display-tooltip-when-elided="true" name="BtnCompanies" class="button" />
+            <ui:ListView focusable="true" name="ListCompanies" class="list" />
+            <ui:ListView focusable="true" name="ListFacilities" class="list disabled" />
+            <ui:Button text="Facilities ↻" display-tooltip-when-elided="true" name="BtnFacilities" enable-rich-text="true" class="button disabled" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ColAssets" class="column" style="display: flex;">
+            <ui:Button text="Asset Bundles ↻" display-tooltip-when-elided="true" name="BtnAssets" enable-rich-text="true" class="button disabled" />
+            <ui:Instance template="AssetTypeTemplate" name="AssetTypeTemplate" style="height: 200px;" />
+            <ui:ListView focusable="true" name="ListBundles" class="list disabled" style="height: 80%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ColDetails" class="column" style="justify-content: center; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+            <ui:GroupBox style="flex-direction: row; align-items: auto; justify-content: center;">
+                <ui:Button text="Edit ✎" display-tooltip-when-elided="true" name="BtnEdit" class="button" />
+                <ui:Button text="Delete ✘" display-tooltip-when-elided="true" name="BtnDelete" class="button" />
+            </ui:GroupBox>
+            <ui:VisualElement name="Details" style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; background-color: rgb(58, 58, 58); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; height: auto;">
+                <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1">
+                    <ui:GroupBox name="Facility">
+                        <ui:Label text="Facility" display-tooltip-when-elided="true" class="header" />
+                        <ui:GroupBox name="GroupName" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Name: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="Facility Name" display-tooltip-when-elided="true" name="TxtFacilityName" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="GroupDetails" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Description: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="Company Name That is really long yeah man" display-tooltip-when-elided="true" name="TxtFacilityDescription" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="GroupCreated" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Created: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="2022/12/11" display-tooltip-when-elided="true" name="TxtFacilityDate" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="Asset">
+                        <ui:Label text="Asset" display-tooltip-when-elided="true" name="TxtAssetHeader" class="header" />
+                        <ui:GroupBox name="GroupName" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Name: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="Facility Name" display-tooltip-when-elided="true" name="TxtAssetName" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="GroupCreated" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Created: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="2022/12/11" display-tooltip-when-elided="true" name="TxtAssetDate" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                    </ui:GroupBox>
+                    <ui:GroupBox name="Company">
+                        <ui:Label text="Company" display-tooltip-when-elided="true" class="header" />
+                        <ui:GroupBox name="GroupName" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Name: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="Company Name That is really long yeah man" display-tooltip-when-elided="true" name="TxtCompanyName" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="GroupDetails" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Description: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="Company Name That is really long yeah man" display-tooltip-when-elided="true" name="TxtCompanyDescription" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                        <ui:GroupBox name="GroupCreated" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: wrap;">
+                            <ui:Label text="Created: " display-tooltip-when-elided="true" class="txt-label" style="width: auto;" />
+                            <ui:Label text="2022/12/11" display-tooltip-when-elided="true" name="TxtCompanyDate" class="txt-details" style="white-space: normal; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-wrap: nowrap;" />
+                        </ui:GroupBox>
+                    </ui:GroupBox>
+                </ui:ScrollView>
+            </ui:VisualElement>
+            <ui:Button text="Load ►" display-tooltip-when-elided="true" name="BtnLoad" class="button" />
+        </ui:VisualElement>
+        <ui:GroupBox name="Loader" class="hidden" style="position: absolute; width: 100%; height: 100%; align-items: auto; justify-content: flex-start; background-color: rgba(171, 171, 171, 0.56); left: 0; top: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; display: none;">
+            <ui:Label text="Loading ..." display-tooltip-when-elided="true" style="width: 100%; height: 100%; -unity-text-align: middle-center; font-size: 16px; -unity-font-style: bold; color: rgb(0, 0, 0);" />
+        </ui:GroupBox>
+        <ui:GroupBox name="Profile" style="position: absolute; top: -30px; right: 0; flex-direction: row-reverse; width: 100%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:Button text="X" display-tooltip-when-elided="true" name="BtnClose" style="height: 25px; width: 25px; -unity-font-style: bold;" />
+            <ui:Button text="Log out" display-tooltip-when-elided="true" name="BtnLogout" style="height: 25px;" />
+            <ui:Button text="Clear Cache" display-tooltip-when-elided="true" name="BtnClearCache" style="height: 25px;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

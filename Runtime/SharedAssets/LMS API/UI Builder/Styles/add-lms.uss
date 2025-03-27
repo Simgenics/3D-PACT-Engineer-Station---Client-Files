@@ -1,0 +1,21 @@
+.item-label {
+    font-size: 13px;
+    -unity-font-style: bold;
+    margin-bottom: 5px;
+    -unity-text-align: upper-center;
+}
+
+.section {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+Label {
+    -unity-text-align: upper-left;
+}
+
+Toggle > VisualElement {
+    flex-direction: row-reverse;
+}

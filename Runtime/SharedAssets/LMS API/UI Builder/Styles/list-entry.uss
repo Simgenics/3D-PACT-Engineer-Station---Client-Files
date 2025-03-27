@@ -1,0 +1,40 @@
+.list-entry {
+    height: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 10px;
+    background-color: rgb(38, 115, 159);
+    border-color: rgb(49, 26, 17);
+    border-width: 2px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: auto;
+}
+
+.list-entry:hover {
+    background-color: rgba(87, 166, 207, 255);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition-property: margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.entry-label {
+    -unity-font-style: bold;
+    font-size: 16px;
+    color: rgb(49, 26, 17);
+    -unity-font: url('project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&guid=e3265ab4bf004d28a9537516768c1c75&type=3#LiberationSans');
+}
+
+.list-entry:hover > Label {
+    color: rgba(241, 241, 241, 255);
+    transition-duration: 0.2s;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+}

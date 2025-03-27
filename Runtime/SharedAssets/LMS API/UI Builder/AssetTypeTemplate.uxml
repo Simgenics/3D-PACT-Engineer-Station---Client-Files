@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/entity-radio.uss?fileID=7433441132597879392&amp;guid=216fb57967f3c42949b1f902429dd3f7&amp;type=3#entity-radio" />
+    <ui:RadioButtonGroup label="Type" value="-1" style="flex-wrap: wrap; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+    <ui:GroupBox>
+        <ui:RadioButton label="Asset Bundle" value="true" name="BtnRadioAsset" class="radio-item" />
+        <ui:RadioButton label="Scene Config" name="BtnRadioScene" class="radio-item" />
+        <ui:RadioButton label="Scenario" name="BtnRadioScenario" class="radio-item" />
+    </ui:GroupBox>
+</ui:UXML>

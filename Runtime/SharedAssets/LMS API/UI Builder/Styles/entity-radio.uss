@@ -1,0 +1,29 @@
+RadioButtonGroup {
+    flex-direction: row;
+}
+
+RadioButtonGroup > Label {
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+    font-size: 12px;
+    width: 100%;
+}
+
+.radio-item {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.radio-item > VisualElement {
+    flex-direction: row-reverse;
+    align-items: auto;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.radio-item > Label {
+}
+
+.radio-item .disabled {
+    background-color: rgba(166, 93, 109, 255);
+}

@@ -1,0 +1,24 @@
+{
+    "name": "com.simgenics.3dpact-es-clientfiles",
+    "version": "2025.2.1f0",
+    "displayName": "3D PACT ES CLIENT FILES",
+    "description": "Funtionaility for logging in, importing and exporting bundles",
+    "unity": "2022.3",
+    "author": {
+      "name": "SimGenics LLC",
+      "email": "info@simgenics.com",
+      "url": "https://www.simgenics.com"
+    },
+    "dependencies": {
+    "com.unity.addressables": "1.21.21",
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.xr.openxr": "1.9.1",
+    "com.unity.scriptablebuildpipeline": "1.21.23",
+    "com.unity.xr.core-utils": "2.2.3",
+    "com.unity.xr.hands": "1.5.0",
+    "com.unity.xr.interaction.toolkit": "2.5.4",
+    "com.unity.xr.legacyinputhelpers": "2.1.10",
+    "com.unity.xr.management": "4.4.1"
+  }
+  }
